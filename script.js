@@ -3,6 +3,7 @@ const squareContainer = document.querySelector("#square_container");
 function createGrid(squaresNumber){
 
     squareContainer.innerHTML = '';
+    
 
     for(let i = 1; i <= squaresNumber; i++){
     
@@ -22,14 +23,26 @@ function createGrid(squaresNumber){
             div2.style.backgroundColor = "white";
             div2.style.flexGrow = "1";
             div2.style.flexShrink = "1";
+
+            let opacity = 0;
     
             div2.addEventListener("mouseover", () => {
                 div2.style.backgroundColor = "black";
+                opacity += 0.10;
+                div2.style.opacity =+ opacity;
             });
-
             div.appendChild(div2);
         }
     }
+}
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
 
 createGrid(16);
@@ -40,6 +53,7 @@ cleanButton.addEventListener("click", () => {
     const squares = document.querySelectorAll("#square");
     squares.forEach(square => {
         square.style.backgroundColor = "white";
+        square.style.opacity = "1";
     });
 })
 
