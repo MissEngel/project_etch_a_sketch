@@ -5,25 +5,30 @@
 
 body{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(194, 194, 194);
 }
 
+
 #square_container{ 
     display: flex;
-    border: 10px solid black;
+    border: 6px solid black;
     border-radius: 5px;
     flex-basis: 960px;
     max-width: 960px;
     max-height: 960px;
+    margin: auto;
+    margin-top: 2rem;
 }
 
-div > div{
-   
+button{
+    padding: 1rem;
+    flex-basis: 1rem;
+    text-align: right;
+    margin-left: auto;
 }
 
-#square_container div{
-    
+.butt_container{
+    width: fit-content;
+    margin: auto;
+    margin-top: 2rem;
 }
